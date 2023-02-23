@@ -1,10 +1,10 @@
-package com.helloWorld;
+package com.halloWorld;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CrudJdbcDemoHbkApplicationTests {
+class CrudOperationsUsingJdbcApplicationTests {
 
   @Test
   void contextLoads() {}

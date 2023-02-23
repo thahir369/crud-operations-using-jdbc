@@ -1,11 +1,12 @@
-package com.helloWorld.repository;
+package com.halloWorld.repository;
 
-import com.helloWorld.model.Movie;
-import java.util.List;
-import java.util.Optional;
+import com.halloWorld.entity.Movie;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
@@ -24,6 +25,11 @@ public class MovieRepositoryImpl implements MovieRepository {
                 rs.getString("hero"),
                 rs.getString("release"),
                 rs.getInt("likes")));
+  }
+
+  @Override
+  public List<Movie> findMoviesByYear(String year) {
+    return null;
   }
 
   @Override

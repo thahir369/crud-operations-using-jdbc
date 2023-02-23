@@ -1,12 +1,14 @@
-package com.helloWorld.repository;
+package com.halloWorld.repository;
 
-import com.helloWorld.model.Movie;
+import com.halloWorld.entity.Movie;
 import java.util.List;
 import java.util.Optional;
 
 public interface MovieRepository {
 
   List<Movie> findAllMovies();
+
+  List<Movie> findMoviesByYear(String year);
 
   Optional<Movie> findMovieByName(String name);
 

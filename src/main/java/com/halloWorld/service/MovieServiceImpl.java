@@ -1,11 +1,12 @@
-package com.helloWorld.service;
+package com.halloWorld.service;
 
-import com.helloWorld.model.Movie;
-import com.helloWorld.repository.MovieRepository;
-import java.util.List;
-import java.util.Optional;
+import com.halloWorld.entity.Movie;
+import com.halloWorld.repository.MovieRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -18,6 +19,11 @@ public class MovieServiceImpl implements MovieService {
   @Override
   public List<Movie> fetchAllMovies() {
     return movieRepository.findAllMovies();
+  }
+
+  @Override
+  public List<Movie> fetchMoviesByYear(String year) {
+    return movieRepository.findMoviesByYear(year);
   }
 
   @Override

@@ -10,10 +10,10 @@
   </parent>
 
   <groupId>com.helloWorld</groupId>
-  <artifactId>crud-jdbc-demo-hbk</artifactId>
+  <artifactId>crud-operations-using-jdbc</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>crud-jdbc-demo-hbk</name>
-  <description>Demo project for Spring Boot</description>
+  <name>crud-operations-using-jdbc</name>
+  <description>Spring Boot crud operations using JDBC and H2 database</description>
 
   <properties>
     <java.version>11</java.version>

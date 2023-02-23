@@ -1,12 +1,15 @@
-package com.helloWorld.service;
+package com.halloWorld.service;
 
-import com.helloWorld.model.Movie;
+import com.halloWorld.entity.Movie;
+
 import java.util.List;
 import java.util.Optional;
 
 public interface MovieService {
 
   List<Movie> fetchAllMovies();
+
+  List<Movie> fetchMoviesByYear(String year);
 
   Optional<Movie> fetchMovieByName(String name);
 

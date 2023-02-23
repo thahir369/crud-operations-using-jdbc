@@ -1,17 +1,12 @@
-package com.helloWorld.controller;
+package com.halloWorld.controller;
 
-import com.helloWorld.model.Movie;
-import com.helloWorld.service.MovieService;
+import com.halloWorld.entity.Movie;
+import com.halloWorld.service.MovieService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.Optional;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
@@ -19,9 +14,14 @@ public class MovieController {
 
   private final MovieService movieService;
 
-  @GetMapping(value = "/movies", produces = "application/json")
+  @GetMapping(value = "/allMovies", produces = "application/json")
   public List<Movie> getAllMovies() {
     return movieService.fetchAllMovies();
+  }
+
+  @GetMapping(value = "/movies", produces = "application/json")
+  public List<Movie> getMoviesByYear(@RequestParam String year) {
+    return movieService.fetchMoviesByYear(year);
   }
 
   @GetMapping(value = "/movies/{movie}", produces = "application/json")

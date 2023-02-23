@@ -1,6 +1,6 @@
 spring:
   application:
-    name: crud-jdbc-demo-hbk
+    name: crud-operations-using-jdbc
   h2:
     console:
       enabled: true   # H2-InMemory DB-console --> http://localhost:8080/h2-console (default) here i named as http://localhost:8080/h2
